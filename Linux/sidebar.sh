@@ -1,5 +1,5 @@
-for i in *.md;
+for i in `ls -tr | tr "\t" "\n"`;
 do
 i=${i%.md*};
-echo - [${i}]\(/Linux基础/${i}.md\) >>_sidebar.md
+echo - [${i}]\(/题目/${i}.md\) >>../_sidebar.md
 done

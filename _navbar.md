@@ -1,4 +1,6 @@
 * [Home](/)
-* [Bioinfo](/bioinfo/)
+* [Bioinfo](/Bioinfo/)
 * [Linux](/Linux/)
 * [Python](/Python/)
+* [R](/R/)
+* [Tools](/Tools/)

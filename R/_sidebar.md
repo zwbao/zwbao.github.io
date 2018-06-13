@@ -1,0 +1,2 @@
+- [bioconductor注释：probe+cdf芯片](/R/bioconductor注释：probe+cdf芯片.md)
+- [用R获取芯片探针与基因的对应关系](/R/用R获取芯片探针与基因的对应关系.md)
