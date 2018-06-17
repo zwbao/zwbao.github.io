@@ -1,1 +1,3 @@
 - [翻译·Ten Things I Wish I’d Known About bash](/Bioinfo/06-翻译·Ten Things I Wish I’d Known About bash.md)
+- [我的Git笔记（一）](/Bioinfo/我的Git笔记（一）.md)
+- [我的Git笔记（二）](/Bioinfo/我的Git笔记（二）.md)
