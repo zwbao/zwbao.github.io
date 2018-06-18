@@ -1,5 +1,7 @@
 # 我的Python笔记·BioPython（一）
 
+![](https://biopython.org/assets/images/biopython_logo_white.png)
+
 ## 简介
 
 `Biopython`（https://biopython.org/）是一个计算分子生物学模块的集合，用它可以实现许多生物信息学项目中的基本任务，比如：
