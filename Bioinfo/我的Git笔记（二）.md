@@ -160,7 +160,7 @@ $ git commit -m "added .gitignore"
  create mode 100644 .gitignore
 ```
 
-### 那么那些文件是我们应该告诉`.gitignore`将他们忽略的呢？
+### 那么哪些文件是我们应该告诉`.gitignore`将他们忽略的呢？
 
 - 大文件
 这些文件应该被忽略，并通过其他方式进行管理。 大文件会减慢创建，推送和提交的速度。当别人克隆你的仓库时，这可能会导致相当大的麻烦。
@@ -174,4 +174,49 @@ Emacs和Vim等文本编辑器有时会在你的目录中创建一些临时文件
 - 临时的代码文件
 一些编程语言的编译器（例如`Python`）通常也会产生一些临时文件（例如`overlap.pyc`），需要将他们忽略。
 
+## 使用`git reset`撤销暂存区的修改
 
+如果你不小心把一个错误的修改`git add`到暂存区了，你可以使用`git reset`来取消它。 例如：
+
+```
+$ echo "TODO: ask sequencing center about adapters" >> README.md
+$ git add README.md
+$ git status
+# On branch master
+# Changes to be committed:
+# (use "git reset HEAD <file>..." to unstage)
+# #
+new file: README.md
+#
+```
+
+用`git status`查看后，我们可以发现我们对于`README.md`的改变已经包含在下一次的提交中，为了撤销这次修改，根据`git status`的提示输入`git reset HEAD README.md`：
+
+```
+$ git reset HEAD README.md
+$ git status
+# On branch master
+# Changes not staged for commit:
+# (use "git add <file>..." to update what will be committed)
+# (use "git checkout -- <file>..." to discard changes in working
+directory)
+# #
+modified: README.md
+#
+```
+
+
+在`Git`中，我们用`HEAD`来表示当前版本，也就是最新的提交，上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个`^`比较容易数不过来，所以写成`HEAD~100`。
+
+现在我们虽然已经撤回了这次的`git add`，但是`README.md`文件中已经添加了`TODO: ask sequencing center about adapters`这一行，倘若我们要丢弃工作区的修改呢？
+
+## 使用`git checkout`丢弃工作区的修改
+
+用`git checkout -- file`命令可以丢弃工作区的修改：
+
+```
+$ git checkout -- README.md
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
