@@ -1,2 +1,7 @@
-- [VNote：不仅仅是Markdown编辑器](/Tools/VNote：不仅仅是Markdown编辑器.md)
-- [我的笔记之道](/Tools/我的笔记之道.md)
+- 笔记之道
+	- [VNote：不仅仅是Markdown编辑器](/Tools/VNote：不仅仅是Markdown编辑器.md)
+	- [我的笔记之道](/Tools/我的笔记之道.md)
+- Git
+	- [我的Git笔记（一）](/Tools/我的Git笔记（一）.md)
+	- [我的Git笔记（二）](/Tools/我的Git笔记（二）.md)
+	- [我的Git笔记（三）](/Tools/我的Git笔记（三）.md)
