@@ -6,7 +6,7 @@ Git是目前世界上最先进的分布式版本控制系统（没有之一）�
 
 碰巧，软件工程师们在协作的过程中也遇到了相同的问题，Linus编写了Git来管理Linux，这是一个包含了数千个协作者同时更改和处理文件的大型代码库。Git非常适合用于项目版本控制和协作工作。诚然，Git刚开始学习起来可能非常棘手，但只要勤加练习，在苦苦挣扎之后，你会发现它会远远超出你的期望。
 
-![分布式版本控制](https://images2017.cnblogs.com/blog/63651/201709/63651-20170904214244944-1222535795.png)
+![分布式版本控制](http://oo3g995ih.bkt.clouddn.com/blog/180702/HK6Il2d22m.png?imageslim)
 
 ## 为什么Git对于管理生物信息数据是必不可少的
 
@@ -46,7 +46,7 @@ sudo apt-get install git
 
 Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：
 
-![工作区域](https://images2017.cnblogs.com/blog/63651/201709/63651-20170905201017069-171460014.png)
+![工作区域](http://oo3g995ih.bkt.clouddn.com/blog/180702/AjDA374Ff4.png?imageslim)
 
 - Workspace：工作区，就是你平时存放项目代码的地方；
 - Index / Stage：暂存区，用于临时存放你的改动，保存即将提交到文件列表信息；
@@ -62,7 +62,7 @@ git的工作流程一般是这样的：
 
 因此，git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)。
 
-![工作流程](https://images2017.cnblogs.com/blog/63651/201709/63651-20170905201033647-1915833066.png)
+![工作流程](http://oo3g995ih.bkt.clouddn.com/blog/180702/CL2l0h0EIl.png?imageslim)
 
 ### Git入门：创建仓库，跟踪文件和提交修改
 
