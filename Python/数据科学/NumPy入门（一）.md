@@ -853,6 +853,7 @@ print(left)
 print(right)
 ```
 
+```
     [[ 0  1]
      [ 4  5]
      [ 8  9]
@@ -861,5 +862,6 @@ print(right)
      [ 6  7]
      [10 11]
      [14 15]]
+```
 
 > 笔记整理自《Python数据科学手册》，本书的英文版以及一些资料已在[Github开源](https://github.com/jakevdp/PythonDataScienceHandbook)。
