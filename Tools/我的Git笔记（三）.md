@@ -286,4 +286,4 @@ added information about samples
 3. 用`git add`递交这些冲突的文件到暂存区；
 4. 用`git status`来检查一下，再用`git commit`提交；之后，你就可以马上`push`到远程仓库，这样你的合作者可以看到你解决了这个冲突，并在更新的版本上继续他们的工作。
 
-> 本文主要参考了《Bioinformatics Data Skills》第五章以及廖雪峰Git教程（https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 ）
+> 本文主要参考了《Bioinformatics Data Skills》第五章以及[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 )
