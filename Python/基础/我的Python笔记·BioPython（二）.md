@@ -2,9 +2,6 @@
 
 ![](https://biopython.org/assets/images/biopython_logo_white.png)
 
-## 本文内容
-
-
 ## 问题
 
 前一部分主要讲了如何用`Biopython`处理数据文件（如`FATSA`和`GenBank`），现在我们将学习用`Biopython`访问NCBI数据库（如`PubMed`和`GenBank`），以及`Expasy`资源（如`UniProt`），检索和解析他们的内容。
