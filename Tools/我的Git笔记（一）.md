@@ -213,6 +213,4 @@ no changes added to commit (use "git add" and/or "git commit -a")
 - Git的一些概念；
 - 简单介绍了Git的流程。
 
-在接下来的教程中小编会介绍Git更多实用的命令和功能，另外后台回复`cheatsheet`有惊喜~
-
-> 本文主要参考了《Bioinformatics Data Skills》第五章以及廖雪峰Git教程（https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 ）
+> 本文主要参考了《Bioinformatics Data Skills》第五章以及[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 )
