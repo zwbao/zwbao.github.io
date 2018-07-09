@@ -16,7 +16,7 @@ NumPy（Numerical Python）是 Python 中的一个线性代数库。对每一个
 import numpy as np
 ```
 
-### 从Python列表创建数组：
+### 从Python列表创建数组
 
 可以用`np.array`从Python列表创建数组：
 
