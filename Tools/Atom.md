@@ -45,7 +45,9 @@ python -m pip install jupyter
 ## Kite
 kite是一款Python开发必备神器，集代码**自动补全**，**帮助文档**，**示例代码模板**等功能于一身。小编为大家从YouTube搬运回来了Kite的官方介绍视频，大家可以自己感受下这款工具的强大。
 
+<div align=center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bF50YPyUKTQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 一些常用的插件
 
