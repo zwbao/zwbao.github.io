@@ -1,2 +1,4 @@
-- [翻译·Ten Things I Wish I’d Known About bash](/Bioinfo/06-翻译·Ten Things I Wish I’d Known About bash.md)
-- [翻译·读生信博士的十万个理由](/Bioinfo/读生信博士的十万个理由.md)
+- 翻译
+
+	- [Ten Things I Wish I’d Known About bash](/Bioinfo/Ten Things I Wish I’d Known About bash.md)
+	- [读生信博士的十万个理由](/Bioinfo/读生信博士的十万个理由.md)
