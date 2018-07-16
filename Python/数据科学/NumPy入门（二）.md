@@ -2,13 +2,11 @@
 
 ## Numpy数组的计算：通用函数
 
-
+导入`NumPy`
 
 ```python
 import numpy as np
 ```
-
-## NumPy的通用函数
 
 ### 数组的运算
 
