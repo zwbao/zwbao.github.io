@@ -13,3 +13,4 @@
 - 数据处理
 	- [NumPy入门（一）](/Python/数据科学/NumPy入门（一）.md)
 	- [NumPy入门（二）](/Python/数据科学/NumPy入门（二）.md)
+	- [NumPy入门（三）](/Python/数据科学/NumPy入门（三）.md)
