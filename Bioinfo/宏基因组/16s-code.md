@@ -1,6 +1,6 @@
 # 16s 分析实战（QIIME2）
 
-主要参考了 QIIME2文档的英文版（https://docs.qiime2.org/2018.4/）以及中文版（https://forum.qiime2.org/t/qiime2-chinese-manual/838）
+主要参考了 QIIME2文档的英文版（ https://docs.qiime2.org/2018.4/ ）以及中文版（ https://forum.qiime2.org/t/qiime2-chinese-manual/838 ）。
 
 > 导入二代测序数据方法参见：https://docs.qiime2.org/2018.6/tutorials/importing/#fastq-manifest-formats
 
