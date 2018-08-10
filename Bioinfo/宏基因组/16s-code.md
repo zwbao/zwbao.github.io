@@ -4,6 +4,12 @@
 
 > 导入二代测序数据方法参见：https://docs.qiime2.org/2018.6/tutorials/importing/#fastq-manifest-formats
 
+## 分析流程
+
+[pipeline](https://www.processon.com/embed/5b6c116ce4b067df5a0216c0 ':include :type=iframe width=100% height=1000px')
+
+## 代码
+
 ```
 source activate qiime2-2018.4
 # import
