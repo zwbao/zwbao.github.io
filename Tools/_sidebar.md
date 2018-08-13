@@ -6,3 +6,5 @@
 	- [我的Git笔记（一）](/Tools/我的Git笔记（一）.md)
 	- [我的Git笔记（二）](/Tools/我的Git笔记（二）.md)
 	- [我的Git笔记（三）](/Tools/我的Git笔记（三）.md)
+- Bioinfo
+	- [强大的并行工具 GNU Parallel](/Tools/Parallel.md)
