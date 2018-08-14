@@ -16,32 +16,42 @@ def citation(id):
     source = record[0]['Source']
     so = record[0]['SO'].split(";")[1].split(":")[0]
     pages = record[0]['Pages']
+    cit = ""
 
-    if len(record[0]['AuthorList']) > 3: # 最多三个作者
+    if len(record[0]['AuthorList']) > 3:
         cit = record[0]['AuthorList'][0] + ", " + record[0]['AuthorList'][1] + ", "+ record[0]['AuthorList'][2] + ", et al. "+"("+ pub_year + "). " + "\"" + title + "\" " + source + " " + so + ": " + pages + "."
-    else:
-        cit = record[0]['AuthorList'][0] + ", " + record[0]['AuthorList'][1] + ", "+ record[0]['AuthorList'][2] +"("+ pub_year + "). " + "\"" + title + "\" " + source + " " + so + ": " + pages + "."
-    
+    elif len(record[0]['AuthorList']) == 3:
+        cit = record[0]['AuthorList'][0] + ", " + record[0]['AuthorList'][1] + " and "+ record[0]['AuthorList'][2] +" " +"("+ pub_year + "). " + "\"" + title + "\" " + source + " " + so + ": " + pages + "."
+    elif len(record[0]['AuthorList']) == 2:
+        cit = record[0]['AuthorList'][0] + " and " + record[0]['AuthorList'][1] +" " + "("+ pub_year + "). " + "\"" + title + "\" " + source + " " + so + ": " + pages + "."
+    elif len(record[0]['AuthorList']) == 1:
+        cit = record[0]['AuthorList'][0] + " " + "("+ pub_year + "). " + "\"" + title + "\" " + source + " " + so + ": " + pages + "."
     return cit
 
-for line in open('zwbao.txt'):
-    pmid = line.split("\t")[18]
-    if pmid != "citation_id":
-        cit_list = pmid.strip().split(";")
-        cit_sum_list = []
+file = r'citation2cly.txt'
 
-        if cit_list[0] != "":
-            if len(cit_list) <= 3:
-                for i in range(len(cit_list)):
-                    cit_sum_list.append(cit_list[i])
-                    cit_sum_list.append(citation(cit_list[i]))
-            else: # 最多插入三篇参考文献
-                for i in range(3):
-                    cit_sum_list.append(cit_list[i])
-                    cit_sum_list.append(citation(cit_list[i])) 
-            print("\t".join(cit_sum_list))
-        else:
-            print("")
+with open(file, 'a+', encoding='utf-8') as f:
+    for line in open('cly.txt'):
+        if line.strip() != "citation_id":
+            cit_list = line.strip().split(";")
+            cit_sum_list = []
+
+            if cit_list[0] != "":
+                for i in cit_list:
+                    if str(i).startswith("NBK"):
+                        cit_list.remove(i)
+                if len(cit_list) <= 3:
+                    for i in range(len(cit_list)):
+                        cit_sum_list.append(cit_list[i])
+                        cit_sum_list.append(citation(cit_list[i]))
+                else:
+                    for i in range(3):
+                        cit_sum_list.append(cit_list[i])
+                        cit_sum_list.append(citation(cit_list[i])) 
+                f.write("\t".join(cit_sum_list) + "\n")
+            else:
+                f.write("\n")
+        print("b", end="")
 ```
 
 ## Result
