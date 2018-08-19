@@ -17,7 +17,9 @@
 	- [Pandas | 安装与使用](/Python/数据科学/Pandas数据处理（一）.md)
 	- [Pandas | 数值取值与选择及数值运算方法](/Python/数据科学/Pandas数据处理（二）.md)
 	- [Pandas | 处理缺失值](/Python/数据科学/Pandas数据处理（三）-1.md)
-	- [Pandas | 层级索引](/Python/数据科学/Pandas数据处理（三）-2.md)- [sidebar.sh](/Python/基础/sidebar.sh.md)
+	- [Pandas | 层级索引](/Python/数据科学/Pandas数据处理（三）-2.md)
+	- [Pandas | 合并数据集](/Python/数据科学/Pandas数据处理（四）.md)
+	
 - Python 脚本
 	- [根据 gene list 从NCBI获取基因信息并翻译](/Python/脚本/根据 gene list 从NCBI获取基因信息并翻译.md)
 	- [根据 PMID 获取参考文献 Author-Date 格式](/Python/脚本/根据 PMID 获取参考文献 Author-Date 格式.md)
