@@ -4,27 +4,6 @@
 
 [get_gene_summary](/Python/脚本/get_gene_summary.py ':include :type=code')
 
-```python
-from Bio import Entrez # pip install biopython
-from translate_api.translate_api import api # pip install translate_api
-import re
-
-rm_pattern = re.compile('\[.*?\]')
-
-for line in open('gene.txt'): # 输入去重的基因列表
-    gene = str(line.strip())
-    gene_term = "(" + gene +"[Gene Name]) AND Homo sapiens[Organism]"
-    Entrez.email = "shinningbzw@foxmail.com"
-    handle = Entrez.esearch(db="gene", term=gene_term)
-    gene_id = Entrez.read(handle)['IdList'][0]
-    sum_handle = Entrez.esummary(db="gene", id=gene_id)
-    sum_record = Entrez.read(sum_handle)
-    r_gene_sum = sum_record['DocumentSummarySet']['DocumentSummary'][0]['Summary']
-    gene_sum = rm_pattern.sub('', r_gene_sum)
-    translation = api(gene_sum)
-    print(gene + "\n" + gene_sum + "\n" + translation + "\n")
-```
-
 ## Result
 
 ```
