@@ -2,6 +2,8 @@
 
 ## Code
 
+[get_gene_summary](/Python/脚本/get_gene_summary.py ':include :type=code')
+
 ```python
 from Bio import Entrez # pip install biopython
 from translate_api.translate_api import api # pip install translate_api
