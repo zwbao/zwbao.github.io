@@ -19,6 +19,7 @@
 	- [Pandas | 处理缺失值](/Python/数据科学/Pandas数据处理（三）-1.md)
 	- [Pandas | 层级索引](/Python/数据科学/Pandas数据处理（三）-2.md)
 	- [Pandas | 合并数据集](/Python/数据科学/Pandas数据处理（四）.md)
+	- [Pandas | 累计与分组](/Python/数据科学/累计与分组.md)
 	
 - Python 脚本
 	- [根据 gene list 从NCBI获取基因信息并翻译](/Python/脚本/根据 gene list 从NCBI获取基因信息并翻译.md)
