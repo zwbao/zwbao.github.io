@@ -2,6 +2,8 @@
 	- [VNote：不仅仅是Markdown编辑器](/Tools/VNote：不仅仅是Markdown编辑器.md)
 	- [我的笔记之道](/Tools/我的笔记之道.md)
 	- [用Atom优雅地写Python](/Tools/Atom.md)
+	- [免费的在线版Jupyter Notebook](/Tools/免费的在线版Jupyter Notebook.md)
+	- [Windows下双击打开jupyter notebook](/Tools/Windows下双击打开jupyter notebook.md)
 - Git
 	- [我的Git笔记（一）](/Tools/我的Git笔记（一）.md)
 	- [我的Git笔记（二）](/Tools/我的Git笔记（二）.md)
