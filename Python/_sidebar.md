@@ -23,7 +23,7 @@
 	- [Pandas | 数据透视表](/Python/数据科学/数据透视表.md)
 	
 - 用 BioPython 做一些酷酷的事情
-	- [处理序列文件](/BioPython/处理序列文件.md)
+	- [处理序列文件](/Python/BioPython/处理序列文件.md)
 	
 - Python 脚本
 	- [根据 gene list 从NCBI获取基因信息并翻译](/Python/脚本/根据 gene list 从NCBI获取基因信息并翻译.md)
