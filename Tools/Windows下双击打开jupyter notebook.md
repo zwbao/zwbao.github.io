@@ -13,4 +13,6 @@ python -m nbopen.install_win
 assoc .whl=jupyter& ftype jupyter=cmd.exe /c jupyter-notebook "%1"
 ```
 
+缺点：这种方法只能是在已经打开了一个 jupyter notebook 后，再通过双击打开**相同目录**下的文件。
+
 > 原文参见： http://axil.github.io/how-to-open-ipynb-file-with-one-doubleclick-on-windows.html 
