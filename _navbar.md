@@ -7,6 +7,7 @@
 * [Python](/Python/)
 	* [The Basics](/Python/基础/第一个Python程序.md)
 	* [Data Science](/Python/数据科学/NumPy入门（一）.md)
+	* [BioPython](/Python/BioPython/处理序列文件.md)
 	* [My Code](/Python/脚本/根据 gene list 从NCBI获取基因信息并翻译.md)
 * [R](/R/)
 * [Tools](/Tools/)
