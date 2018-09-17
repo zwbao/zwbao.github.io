@@ -21,6 +21,7 @@
 	- [Pandas | 合并数据集](/Python/数据科学/Pandas数据处理（四）.md)
 	- [Pandas | 累计与分组](/Python/数据科学/累计与分组.md)
 	- [Pandas | 数据透视表](/Python/数据科学/数据透视表.md)
+	- [Pandas | 向量化字符串操作](/Python/数据科学/向量化字符串操作.md)
 	
 - 用 BioPython 做一些酷酷的事情
 	- [处理序列文件](/Python/BioPython/处理序列文件.md)
