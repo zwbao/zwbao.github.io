@@ -1,6 +1,7 @@
 * [Home](/)
 	* [About Me](/About_Me.md)
 * [Bioinfo](/Bioinfo/)
+	* [经验之谈](/Bioinfo/如何组织生物信息学项目.md)
 * [Linux](/Linux/)
 	* [The Basics](/Linux/Linux基础/Linux操作系统基础.md)
 	* [My Practice](/Linux/题目/生信技能树shell题目整理.md)
