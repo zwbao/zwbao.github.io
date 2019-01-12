@@ -1,4 +1,4 @@
-# My Shiny APP - PubMed Search
+# My Shiny APP | PubMed Search
 
 ## ui.R
 
