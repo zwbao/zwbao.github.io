@@ -73,7 +73,7 @@ qiime diversity core-metrics-phylogenetic \
 # alpha多样性observed_otus(OTU数量)指数 observed_otus_vector.qza
 # alpha多样性香农熵(考虑物种和丰度)指数 shannon_vector.qza
 # beta多样性unweighted_unifrac距离矩阵，不考虑丰度 unweighted_unifrac_distance_matrix.qza
-# beta多样性unweighted_unifrac距离矩阵，考虑丰度 weighted_unifrac_distance_matrix.qza
+# beta多样性weighted_unifrac距离矩阵，考虑丰度 weighted_unifrac_distance_matrix.qza
 
 # 统计faith_pd算法Alpha多样性组间差异是否显著，输入多样性值、实验设计，输出统计结果
 qiime diversity alpha-group-significance \
