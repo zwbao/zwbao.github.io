@@ -1,3 +1,4 @@
 - [bioconductor注释：probe+cdf芯片](/R/bioconductor注释：probe+cdf芯片.md)
 - [用R获取芯片探针与基因的对应关系](/R/用R获取芯片探针与基因的对应关系.md)
 - [My Shiny APP | PubMed Search](/R/pubmed_shiny.md)
+- [Linux安装Rstudio](/R/Linux安装Rstudio.md)
