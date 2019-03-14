@@ -1,16 +1,16 @@
 # 在 Linux 安装 Rstudio
 
 1. 使用`conda`创建`R`环境：
-```R
+```bash
 conda create -n r35 R=3.5
 source activate r35
 ```
 2. 安装必要的`R`包：
-```R
+```bash
 conda install r-essentials
 ```
 3. 安装`Rstudio`:
-```R
+```bash
 conda install -c r rstudio
 ```
 4. 使用`Rstudio`:
