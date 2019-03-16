@@ -8,5 +8,5 @@
 	- [用 R 分析微生物组数据及可视化](/Bioinfo/宏基因组/phyloseq.md)
 
 - 翻译
-	- [Ten Things I Wish I’d Known About bash](/Bioinfo/翻译/Ten Things I Wish I’d Known About bash.md)
+	- [Ten Things I Wish I’d Known About bash](/Bioinfo/翻译/know_bash.md)
 	- [读生信博士的十万个理由](/Bioinfo/翻译/读生信博士的十万个理由.md)
