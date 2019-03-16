@@ -1,3 +1,5 @@
+# Ten Things I Wish I’d Known About bash
+
 > 原文链接：[Ten Things I Wish I’d Known About bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/)
 
 \# 为我的注释
