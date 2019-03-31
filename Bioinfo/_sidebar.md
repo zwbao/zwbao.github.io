@@ -1,7 +1,6 @@
 - 经验之谈
 	- [如何组织生物信息学项目](/Bioinfo/如何组织生物信息学项目.md)
 	- [Ten Things I Wish I’d Known About bash](/Bioinfo/翻译/know_bash.md)
-	- [读生信博士的十万个理由](/Bioinfo/翻译/读生信博士的十万个理由.md)
 
 - 宏基因组
 	- [16s实战代码](/Bioinfo/宏基因组/16s-code.md)
