@@ -1,12 +1,10 @@
-# phyloseq | 用 R 分析微生物组数据及可视化
+# phyloseq 中文教程
 
-## 导入数据
-
-phyloseq 包是一个集OTU 数据导入，存储，分析和图形可视化于一体的工具。它不但利用了 R 中许多经典的工具进行生态学和系统发育分析（例如：vegan，ade4，ape， picante），同时还结合 ggplot2 以轻松生成发表级别的可视化结果。phyloseq 使用的S4类将一个研究所有相关的测序数据及元数据存储为单个对象，从而更容易共享数据并重复结果。
+phyloseq 包是一个集OTU 数据导入，存储，分析和图形可视化于一体的工具。它不但利用了 R 中许多经典的工具进行生态学和系统发育分析（例如：vegan，ade4，ape， picante 等），同时还结合 ggplot2 以轻松生成发表级别的可视化图表。phyloseq 使用的S4类将一个研究所有相关的测序数据及元数据存储为单个对象，从而更容易共享数据并重复结果。
 
 - GitHub 地址：https://github.com/joey711/phyloseq
 
-### 安装
+**安装**
 
 ```R
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -14,9 +12,9 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("phyloseq", version = "3.8")
 ```
 
-### 数据导入
+## 数据导入
 
-一个 phyloseq 类，通常由以下几个部分组成：
+一个 `phyloseq` 类，通常由以下几个部分组成：
 
 - `otu_table` ：一个数字矩阵 `matrix`，包含了 OTU 在每个样本中的丰度信息；
 - `sample_data` ：一个`data.frame`，包含了所有样本的表型信息，行名必须匹配`otu_table` 中的样本名；
@@ -24,7 +22,7 @@ BiocManager::install("phyloseq", version = "3.8")
 
 ![](http://ww1.sinaimg.cn/large/c5d7b0ebly1g0pt78c5eij234l1jpu0x.jpg)
 
-在下面的例子中，我用 R 随机创造了一些模拟数据，要是有真实数据的话，也可以直接导入。
+在下面的例子中，我用 R 随机模拟了一些数据。
 
 ```R
 # Create a pretend OTU table that you read from a file, called otumat
@@ -86,7 +84,7 @@ taxmat
 ## OTU10 "h"    "r"    "d"   "j"   "u"    "f"   "a"
 ```
 
-接下来，我们需要将他们组合成一个 phyloseq 对象：
+接下来，我们需要把这些表格组合成一个 `phyloseq `对象：
 
 ```R
 library("phyloseq")
@@ -195,7 +193,7 @@ plot(random_tree)
 
 ![](https://joey711.github.io/phyloseq/import-data_files/figure-html/unnamed-chunk-8-1.png)
 
-现在，我们有了`otu_table`，`sample_data`，`tax_table`，`phy_tree`这四类数据，以下两种方法都可以将他们合并为一个 phyloseq 对象：1. 使用`merge_phyloseq`函数在之前创建的`physeq`对象中加入`sample_data`和`phy_tree`数据；2. 使用`physeq`函数重新创建一个`physeq`对象。
+现在，我们有了`otu_table`，`sample_data`，`tax_table`，`phy_tree`这四类数据，以下两种方法都可以将他们合并为一个 `phyloseq` 对象：1. 使用`merge_phyloseq`函数在之前创建的`physeq`对象中加入`sample_data`和`phy_tree`数据；2. 使用`physeq`函数重新创建一个`phyloseq`对象。
 
 ```R
 physeq1 = merge_phyloseq(physeq, sampledata, random_tree)
@@ -210,7 +208,7 @@ physeq1
 ## phy_tree()    Phylogenetic Tree: [ 10 tips and 9 internal nodes ]
 ```
 
-使用`physeq`函数重新创建一个`physeq`对象：
+使用`phyloseq`函数重新创建一个对象：
 
 ```R
 physeq2 = phyloseq(OTU, TAX, sampledata, random_tree)
@@ -225,7 +223,7 @@ physeq2
 ## phy_tree()    Phylogenetic Tree: [ 10 tips and 9 internal nodes ]
 ```
 
-看看用这两种方法创建的`physeq`对象是否一样：
+看看用这两种方法创建的`phyloseq`对象是否一样：
 
 ```R
 identical(physeq1, physeq2)
@@ -235,7 +233,7 @@ identical(physeq1, physeq2)
 ## [1] TRUE
 ```
 
-尝试对这些数据进行一些可视化：
+接下来，就尝试对这些数据进行一些简单的可视化：
 
 ```R
 plot_tree(physeq1, color="Location", label.tips="taxa_names", ladderize="left", plot.margin=0.3)
@@ -249,8 +247,6 @@ plot_tree(physeq1, color="Depth", shape="Location", label.tips="taxa_names", lad
 
 ![](https://joey711.github.io/phyloseq/import-data_files/figure-html/treeplot-2.png)
 
-再做一些热图：
-
 ```R
 plot_heatmap(physeq1)
 ```
@@ -263,12 +259,19 @@ plot_heatmap(physeq1, taxa.label="Phylum")
 
 ![](https://joey711.github.io/phyloseq/import-data_files/figure-html/heatmap-random-2.png)
 
-**Reference**
+### 导入 biom 文件
 
-- https://joey711.github.io/phyloseq/import-data.html
+```R
+rich_dense_biom  = system.file("extdata", "rich_dense_otu_table.biom",  package="phyloseq")
+rich_sparse_biom = system.file("extdata", "rich_sparse_otu_table.biom", package="phyloseq")
+min_dense_biom   = system.file("extdata", "min_dense_otu_table.biom",   package="phyloseq")
+min_sparse_biom  = system.file("extdata", "min_sparse_otu_table.biom",  package="phyloseq")
+treefilename = system.file("extdata", "biom-tree.phy",  package="phyloseq")
+refseqfilename = system.file("extdata", "biom-refseq.fasta",  package="phyloseq")
+import_biom(rich_dense_biom, treefilename, refseqfilename, parseFunction=parse_taxonomy_greengenes)
+```
 
 ## 分析实战
-
 
 首先载入`phyloseq`和`ggplot`：
 
@@ -279,7 +282,7 @@ library("ggplot2")
 theme_set(theme_bw())
 ```
 
-在这次的教程中以`phyloseq`自带的`GlobalPatterns`数据集和`enterotype`数据集作为例子。`GlobalPatterns`数据来自一篇2011年的 PNAS 文章 （Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample），比较了 25 个环境样本和 3 个已知的“模拟微生物群落”，包含了 9 种样本类型。`enterotype`数据集即人类肠型数据集来自一篇2011 年的 Nature 文章（Enterotypes of the human gut microbiome），该文章使用宏基因组鸟枪法测序比较了22名受试者的粪便微生物群落，作者进一步将这些微生物群落与来自其他研究的受试者的粪便群落进行比较。
+在这次的教程中以`phyloseq`自带的`GlobalPatterns`数据集和`enterotype`数据集作为例子。`GlobalPatterns`数据集来自一篇2011年的 PNAS 文章 （Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample），其比较了 25 个环境样本和 3 个已知的“模拟微生物群落”，包含了 9 种样本类型。`enterotype`数据集即人类肠型数据集来自一篇2011 年的 Nature 文章（Enterotypes of the human gut microbiome），该文章使用宏基因组鸟枪法测序比较了22名受试者的粪便微生物群落，作者进一步将这些微生物群落与来自其他研究的受试者的粪便群落进行比较。
 
 ### 物种多样性分析
 
@@ -309,7 +312,7 @@ alpha_meas = c("Observed", "Chao1", "ACE", "Shannon", "Simpson", "InvSimpson")
 
 ![](http://ww1.sinaimg.cn/large/c5d7b0ebly1g0vl6upuilj21w310cn0d.jpg)
 
-还可以往上面加`ggplot`图层：
+我们还可以在图形上叠加`ggplot`图层：
 
 ```R
 p + geom_boxplot(data=p$data, aes(x=human, y=value, color=NULL), alpha=0.1)
@@ -317,7 +320,7 @@ p + geom_boxplot(data=p$data, aes(x=human, y=value, color=NULL), alpha=0.1)
 
 ![](http://ww1.sinaimg.cn/large/c5d7b0ebly1g0vl8js8khj21w310c77q.jpg)
 
-以上就是`GlobalPatterns`数据集中样本的 Alpha 多样性分析。每幅图都展示了不同的物种多样性指数，不同的颜色表示不同的样本类型。在每个小组中，将样本进一步分为与人类相关的（TRUE）或不相关的（FALSE），并且在这两个组的顶部叠加箱图，说明这些与人类相关样本不如环境样本物种丰富。
+以上就是`GlobalPatterns`数据集中样本的 Alpha 多样性分析。每幅图都展示了不同的物种多样性指数，不同的颜色表示不同的样本类型。在每个小组中，将样本进一步分为与人类相关的（TRUE）或不相关的（FALSE），并且在这两个组的顶部叠加箱图，结果表明这些与人类相关样本不如环境样本物种丰富。
 
 ### 绘制进化树
 
@@ -347,7 +350,7 @@ data(enterotype)
 
 在`enterotype`数据集中，可用的数据是菌群的相对丰度，而不是原始的数量，所以就不能用来做物种多样性分析。而且 OTU 仅有属级别的注释信息。 
 
-我们先从一个简单的秩丰度条形图开始，计算数据集中每个OTU的累积分数丰度。在这个条形图中，我们通过样本总数（280）进一步标准化。
+我们先从一个简单的秩丰度条形图开始，计算数据集中每个OTU的累积分数丰度。在这个条形图中，我们使用样本总数（280）进一步标准化。
 
 ```R
 par(mar = c(10, 4, 4, 2) + 0.1) # make more room on bottom margin
@@ -357,7 +360,7 @@ barplot(sort(taxa_sums(enterotype), TRUE)[1:N]/nsamples(enterotype), las=2)
 
 ![](http://ww1.sinaimg.cn/large/c5d7b0ebly1g0vm4hfy7mj211k0pymxr.jpg)
 
-上面的例子，我们用到了`R`最基础的`barplot`函数和`phyloseq`提供的`taxa_sums`和`nsamples`函数。你可以看到大约在排名第十的菌属后菌群的相对丰度出现了剧烈下滑。因此我们可以尝试在最多的十个菌属中来分析肠型数据。
+上面的例子，我们用到了`R`最基础的`barplot`函数和`phyloseq`提供的`taxa_sums`和`nsamples`函数。你可以看到大约在排名第十的菌属后，菌群的相对丰度出现了下滑。因此我们可以尝试在最多的十个菌属中来分析肠型数据。
 
 ```R
 TopNOTUs <- names(sort(taxa_sums(enterotype), TRUE)[1:10]) 
@@ -372,7 +375,7 @@ print(ent10)
 ## tax_table()   Taxonomy Table:    [ 10 taxa by 1 taxonomic ranks ]
 ```
 
-这个数据集中共有 280 个样本。接着，看看原始的`metadata`中包含了哪些表型信息：
+这个数据集中共有 280 个样本。我们来看看原始的`metadata`中包含了哪些表型信息：
 
 ```R
 sample_variables(ent10)
@@ -392,7 +395,7 @@ plot_bar(ent10, "SeqTech", fill="Enterotype", facet_grid=~Genus)
 
 ![](http://ww1.sinaimg.cn/mw690/c5d7b0ebly1g0vmouslrij21g40v6acs.jpg)
 
-从上图还可以看出，肠型1 中有较高丰度的 Bacteroides， 肠型2 中有较高丰度的 Prevotella；而对于肠型3 可以观察到高丰度的 Blautia 仅在454-焦磷酸测序的数据中出现，在 Illumina 或 Sanger 的数据中丰度都很低，说明高丰度的 Blautia 可能是引入的误差。
+从上图还可以看出，肠型1 中有较高丰度的 Bacteroides， 肠型2 中有较高丰度的 Prevotella；而对于肠型3 可以观察到高丰度的 Blautia 仅在454-焦磷酸测序的数据中出现，在 Illumina 或 Sanger 的数据中丰度都很低，说明高丰度的 Blautia 可能是由于不同的测序技术而引入的误差。
 
 ### 热图
 
@@ -711,7 +714,7 @@ plot_ordination(GP, GP.dpcoa, type="split",
 
 ## 聚类分析
 
-层级聚类（例如，`hclust`）是可视化样本距离矩阵的另一种流行的方式。在下面的示例中，我们使用了 unweighted UniFrac  距离矩阵和 UPGMA 方法（`hclust`参数： `method="average"`）：
+层级聚类（例如，`hclust`）是可视化样本距离矩阵的另一种流行的方式。在下面的示例中，我们使用了 unweighted UniFrac  距离矩阵和 UPGMA 方法（`hclust`参数： `method="average"`）来进行聚类分析：
 
 ```R
 # (Re)load UniFrac distance matrix and GlobalPatterns data
@@ -728,4 +731,7 @@ plot(GP.hclust, col=cols)
 
 ![](https://static.xmt.cn/be206676fbae484bb61621855ca81445.png)
 
-> 本文翻译整理自：http://www.bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-analysis.html
+**Reference**
+
+- https://joey711.github.io/phyloseq/import-data.html
+- http://www.bioconductor.org/packages/release/bioc/vignettes/phyloseq/inst/doc/phyloseq-analysis.html
